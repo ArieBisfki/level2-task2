@@ -5,7 +5,7 @@ data class Question(
     val isCorrect: Boolean
 ) {
     companion object {
-        val list = listOf(
+        val list = arrayListOf(
             Question("A 'val' and 'var' are the same.", false),
             Question("Mobile Application Development grants 12 ECTS.", true)
         )
