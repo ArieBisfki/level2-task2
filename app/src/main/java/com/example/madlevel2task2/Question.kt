@@ -1,8 +1,8 @@
 package com.example.madlevel2task2
 
 data class Question(
-    val text: String,
-    val isCorrect: Boolean
+    val statementText: String,
+    val statementIsCorrect: Boolean
 ) {
     companion object {
         val list = arrayListOf(

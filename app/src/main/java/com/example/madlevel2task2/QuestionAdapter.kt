@@ -11,7 +11,7 @@ class QuestionAdapter(private val questions: ArrayList<Question>) : RecyclerView
         private val binding = ItemQuestionBinding.bind(itemView)
 
         fun databind(question: Question) {
-            binding.tvQuestionText.text = question.text
+            binding.tvQuestionText.text = question.statementText
         }
     }
 
