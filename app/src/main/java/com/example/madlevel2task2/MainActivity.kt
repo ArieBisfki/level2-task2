@@ -66,11 +66,17 @@ class MainActivity : AppCompatActivity() {
         return ItemTouchHelper(callback)
     }
 
+    /**
+     * This method gets called when the user does a swipe in the correct (according to the predefined correctness of the question) direction.
+     */
     private fun onCorrectSwipe(question: Question) {
         Question.list.remove(question)
         questionAdapter.notifyDataSetChanged()
     }
 
+    /**
+     * This method gets called when the user does a swipe in the incorrect (according to the predefined correctness of the question) direction.
+     */
     private fun onIncorrectSwipe(itemView: View) {
         Snackbar.make(itemView, getString(R.string.wrong), Snackbar.LENGTH_SHORT).show()
         questionAdapter.notifyDataSetChanged()
